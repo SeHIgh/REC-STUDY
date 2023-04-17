@@ -1,0 +1,37 @@
+﻿  CLL.c
+  DCLL.c
+  DLL.c
+  main.c
+  QLL.c
+C:\Codework\Coding_2023\23_1_SelfStudy\C\C_Library\QLL.c(58,18): warning C4047: '함수': 'Queue *'의 간접 참조 수준이 'Queue **'과(와) 다릅니다.
+C:\Codework\Coding_2023\23_1_SelfStudy\C\C_Library\QLL.c(58,15): warning C4024: 'QIsEmpty': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Codework\Coding_2023\23_1_SelfStudy\C\C_Library\QLL.c(70,19): warning C4047: '함수': 'Queue *'의 간접 참조 수준이 'Queue **'과(와) 다릅니다.
+C:\Codework\Coding_2023\23_1_SelfStudy\C\C_Library\QLL.c(70,16): warning C4024: 'QIsEmpty': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+  SLL.c
+  코드를 생성하고 있습니다...
+C:\Codework\Coding_2023\23_1_SelfStudy\C\C_Library\QLL.c(76): warning C4715: 'QDelete': 모든 제어 경로에서 값을 반환하지는 않습니다.
+DCLL.obj : error LNK2005: LCount이(가) CLL.obj에 이미 정의되어 있습니다.
+DCLL.obj : error LNK2005: LFirst이(가) CLL.obj에 이미 정의되어 있습니다.
+DCLL.obj : error LNK2005: LInsert이(가) CLL.obj에 이미 정의되어 있습니다.
+DCLL.obj : error LNK2005: LNext이(가) CLL.obj에 이미 정의되어 있습니다.
+DCLL.obj : error LNK2005: main이(가) CLL.obj에 이미 정의되어 있습니다.
+DLL.obj : error LNK2005: LCount이(가) CLL.obj에 이미 정의되어 있습니다.
+DLL.obj : error LNK2005: LFirst이(가) CLL.obj에 이미 정의되어 있습니다.
+DLL.obj : error LNK2005: LInit이(가) DCLL.obj에 이미 정의되어 있습니다.
+DLL.obj : error LNK2005: LInsert이(가) CLL.obj에 이미 정의되어 있습니다.
+DLL.obj : error LNK2005: LNext이(가) CLL.obj에 이미 정의되어 있습니다.
+DLL.obj : error LNK2005: LPrevious이(가) DCLL.obj에 이미 정의되어 있습니다.
+DLL.obj : error LNK2005: main이(가) CLL.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: main이(가) CLL.obj에 이미 정의되어 있습니다.
+QLL.obj : error LNK2005: QInit이(가) main.obj에 이미 정의되어 있습니다.
+QLL.obj : error LNK2005: QIsEmpty이(가) main.obj에 이미 정의되어 있습니다.
+QLL.obj : error LNK2005: QPeek이(가) main.obj에 이미 정의되어 있습니다.
+QLL.obj : error LNK2005: main이(가) CLL.obj에 이미 정의되어 있습니다.
+SA.obj : error LNK2005: main이(가) CLL.obj에 이미 정의되어 있습니다.
+SLL.obj : error LNK2005: SInit이(가) SA.obj에 이미 정의되어 있습니다.
+SLL.obj : error LNK2005: SIsEmpty이(가) SA.obj에 이미 정의되어 있습니다.
+SLL.obj : error LNK2005: SPeek이(가) SA.obj에 이미 정의되어 있습니다.
+SLL.obj : error LNK2005: SPop이(가) SA.obj에 이미 정의되어 있습니다.
+SLL.obj : error LNK2005: SPush이(가) SA.obj에 이미 정의되어 있습니다.
+SLL.obj : error LNK2005: main이(가) CLL.obj에 이미 정의되어 있습니다.
+C:\Codework\Coding_2023\23_1_SelfStudy\C\C_Library\x64\Debug\C_Library.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.

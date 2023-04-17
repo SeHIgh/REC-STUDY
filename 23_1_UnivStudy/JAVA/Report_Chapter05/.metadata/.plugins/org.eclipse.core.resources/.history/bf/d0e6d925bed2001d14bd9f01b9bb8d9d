@@ -1,0 +1,10 @@
+package MusicTester;
+
+abstract public class Music {
+	String name;
+	int year;
+	public Music()
+	public String toString() {
+		return "Music [곡명=" + name + ", 연도=" + year + "]";
+	}
+}

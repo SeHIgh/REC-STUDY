@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Report_02_01 {
+	public static void main(String[]args) {
+		Scanner scanner = new Scanner(System.in);
+		int score;
+		char credit;
+		System.out.print("성적을 입력하시오: ");
+		score = scanner.nextInt();
+		switch(score/10) {			//점수를 10으로 나눈 몫이 10,9->A, 8->B...로 판단
+		case 10: case 9:
+			credit = 'A';
+			break;
+		case 8:
+			credit = 'B';
+			break;
+		case 7:
+			credit = 'C';
+			break;
+		case 6:
+			credit = 'D';
+			break;
+		default :
+			credit = 'F';
+		}
+		System.out.println("학점: "+credit);
+	}
+}
