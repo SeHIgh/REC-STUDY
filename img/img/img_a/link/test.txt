@@ -1,0 +1,19 @@
+<style>
+      body{
+        margin-top:0;
+        margin-bottom:0;
+        margin-left:0;
+        margin-right:0;
+       }
+       a{
+           margin:0px 20px;
+           color:#000;
+           font-weight:900;
+           font-size:15px;
+           text-decoration:none;  
+          }
+        h2{
+          color:#FE2E9A;  
+          text-align:center; 
+        }
+</style>
