@@ -1,0 +1,70 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#box{
+  width: 300px;
+  height: 300px;
+  border: 2px solid #000;
+  margin: 150px;
+  
+  perspective: 500;
+  /* 원근감 */
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.t{
+  width: 100%;
+  height: 100%;
+  background-color: beige;
+  text-align: center;
+  line-height: 300px;
+  transition: 1s;
+  /* 변환속성 : 동작에 대한 시간 부여 */
+  transform-origin: center center;
+  /* 요소의 중심기점 변경 속성
+    x - left, center, right
+    y - top, center, bottom
+  */
+}
+#box:hover .t{
+  /* transform: translate(100px, 100px); */
+  /*
+  특정한 위치로 이동 / x,y > px,%.v...
+  */
+  transform: translateX(100px);
+  transform: translateY(100px);
+  /* 최종적으로 초기화 한 값으로 이동 */
+
+  transform: scale(1.2,1.2);
+  /* 사이즈 확대, 축소 / x,y > 배수값 */
+
+  transform: rotate(180deg);
+  /* 
+    특정한 값만큼 회전 - 각도단위값(deg) /
+    시계방향 / 마이너스값(반시계방향)
+  */
+
+  transform: rotateX(180deg);
+  /* x축 기점으로 회전 */
+  transform: rotateY(180deg);
+  /* y축 기점으로 회전 */
+
+  transform: skew(45deg,45deg);
+  /* 특정한 각도로 기울이기, 왜곡 - 각도단위값(deg)
+  x, y
+  */
+  transform: skewX(45deg);
+  transform: skewY(45deg);
+
+  transform: scale(1.3) rotateY(180deg);
+
+  rotate: 0 180deg;
+  scale: 1.1 1.1;
+  translate: -100px -100px;
+}
