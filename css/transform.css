@@ -7,7 +7,7 @@
 #box{
   width: 300px;
   height: 300px;
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   margin: 150px;
   
   perspective: 500;
@@ -22,6 +22,10 @@
   width: 100%;
   height: 100%;
   background-color: beige;
+  background-image: url(https://search.pstatic.net/common?type=f&size=152x152&quality=100&direct=true&src=https%3A%2F%2Fmusicmeta-phinf.pstatic.net%2Falbum%2F030%2F431%2F30431404.jpg%3Ftype%3Dr204Fll%26v%3D20231206151041);
+  background-repeat:no-repeat;
+  background-size: 100%;
+  box-shadow: 20;
   text-align: center;
   line-height: 300px;
   transition: 1s;
