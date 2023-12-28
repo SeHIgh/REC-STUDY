@@ -85,7 +85,7 @@ header .headeri ul li:first-child{
 main{
     width: 100%;
     padding: 100px 0;
-    background-image: url(../HW/가변그리드/img/pixabay_main.jpg);
+    background-image: url(./img/pixabay_main.jpg);
     background-position: center;
     text-align: center;
     color: #fff;
