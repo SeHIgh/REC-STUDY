@@ -1,0 +1,83 @@
+COMPANY
+Home
+job
+Employeers
+About us
+Contact
+Login
+Sign up
+  
+
+Job Searching Just Got So Easy
+
+
+
+Searching for the best job
+
+Using the outcomes from the job, 
+ we will put together a plan for 
+ the most effective marketing strategy 
+ to get the best results. 
+
+
+Searching for the best job
+
+Using the outcomes from the job, 
+ we will put together a plan for 
+ the most effective marketing strategy 
+ to get the best results. 
+
+
+Searching for the best job
+
+Using the outcomes from the job, 
+ we will put together a plan for 
+ the most effective marketing strategy 
+ to get the best results. 
+
+
+Searching for the best job
+
+Using the outcomes from the job, 
+ we will put together a plan for 
+ the most effective marketing strategy 
+ to get the best results. 
+ 
+
+
+
+
+문제 )
+
+전체 
+1) topmenu 
+
+- li 패딩라이트 40px
+- 로고박스 4px 각기 색상다르게 자유표현,box높이40px, 패딩좌우20씩
+- 메뉴와 첫번째메뉴간의 li간격 100px
+- 마지막메뉴박스 및 블루박스 패딩좌우30px, 마진상하35px, 마진right40px,height:30px
+
+
+2) contents
+- 가로100%
+- 패딩bottom : 50px
+
+3) contents p
+- margin : 60px auto;
+2
+4) contents_box .box
+- 가로200
+- 마진오른쪽20px
+- 패딩 20px
+- 높이 210px
+
+-----------------반응형웹 동작 설명--------------------
+max-width:768일때 
+상단메뉴 가로넓이 768px
+메뉴5개만 나오도록 해주기
+contents박스 가로100%유지하며 꽉 채우며
+브라우저가 768이하로 줄이더라도 스크롤바나타나며 유지
+
+
+
+
