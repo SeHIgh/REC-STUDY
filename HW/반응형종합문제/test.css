@@ -16,12 +16,19 @@ body{
 header{
   max-width: 1200px;
   height: 90px;
-  background-color: darkblue;
+  background-color: #330066;
   padding: 0 100px;
   margin: auto;
 }
 header>.head-logo-img{
+  position: relative;
+  top: 50%;
+  transform: translate(0,-50%);
   float: left;
+  height: 70px;
+}
+header>.head-logo-img>a>img{
+  height: 70px;
 }
 header>ul{
   float: left;
@@ -29,7 +36,7 @@ header>ul{
 }
 header>ul>li{
   float: left;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   margin-right: 40px;
   line-height: 90px;
@@ -80,3 +87,164 @@ header>#lang{
 }
 /* /header */
 
+/* main */
+main{
+  background-image: url(./img/img001.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 80px;
+}
+main .main-text{
+  margin: auto;
+  margin-bottom: 80px;
+}
+main .main-menu{
+  width: 960px;
+  height: fit-content;
+  margin: auto;
+  opacity: 90%;
+  text-align: center;
+
+  display: flex;
+}
+main .main-menu .menu-box{
+  width: 160px;
+  height: 130px;
+  padding: 25px;
+  background-color: skyblue;
+}
+main .main-menu .menu-box:first-child{
+  background-color: orange;
+}
+main .main-menu .menu-box:last-child{
+  background-color: green;
+}
+main .main-menu .menu-box a{
+  width: 110px;
+  /* 160-25*2 = 110 */
+  height: 80px;
+  /* 130-25*2 = 80 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .main-menu .menu-box a img{
+  margin: auto;
+  width: 45px;
+}
+main .main-menu .menu-box a p{
+  color: white;
+}
+/* /main */
+
+/* section */
+section{
+  padding: 30px;
+  background-color: white;
+}
+section table{
+  margin: auto;
+}
+section table tr td{
+  width: 380px;
+  padding: 10px 10px;
+}
+section table tr td .title-box{
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section table tr:nth-child(2) td:last-child .title-box{
+  border-bottom: 2px solid black;
+}
+section table tr td a .more{
+  width: 18px;
+  height: 18px;
+}
+section table tr td ul{
+  height: 230px;
+  padding: 10px 0;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section table tr td ul li span{
+  font-size: 11px;
+  color: lightgray;
+}
+section table tr td ul li p:first-child{
+  float: left;
+}
+section table tr td ul li p:last-child{
+  float: right;
+}
+/* /section */
+
+/* footer */
+footer{
+  width: 1200px;
+  height: 70px;
+  margin: auto;
+  color: gray;
+}
+footer .footer-logo{
+  float: left;
+  height: 70px;
+}
+footer .footer-logo .footer-logoimg{
+  position: relative;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+footer .footer-text{
+  float: left;
+  height: 50px;
+  margin: 10px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer .footer-text .f-t-t{
+  width: 460px;
+  font-weight: 700;
+}
+footer .footer-text .f-t-t p{
+  float: left;
+}
+footer .footer-text .f-t-t a{
+  float: right;
+}
+footer .footer-text p:last-child{
+  font-size: 11px;
+}
+
+footer .footer-site{
+  height: 70px;
+  float: right;
+}
+footer .footer-site .footer-sns{
+  float: left;
+
+  position: relative;
+  top: 50%;
+  transform: translate(0,-60%);
+}
+footer .footer-site #site{
+  width: 100px;
+  height: 30px;
+  background-color: #333235;
+  border: 1px solid white;
+  color: white;
+
+  float: left;
+
+  position: relative;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+
+/* /footer */
