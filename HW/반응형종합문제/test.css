@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
 *{
   margin: 0;
   padding: 0;
@@ -10,6 +12,7 @@ figure{width: fit-content; height: fit-content;}
 body{
   font-size: 14px;
   background-color: #333235;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* header */
@@ -31,17 +34,22 @@ header>.head-logo-img>a>img{
   height: 70px;
 }
 header>ul{
+  width: 50%;
+  /* 600/1200*100 =50 */
   float: left;
-  margin: 0 50px;
+  margin: 0 4.17%;
+  /* 50/1200*100 = 4.166 */
 }
 header>ul>li{
   float: left;
   font-weight: 500;
   text-align: center;
-  margin-right: 40px;
+  margin-right: 5.83%;
+  /* 35/600*100 = 5.833 */
   line-height: 90px;
   color: white;
   font-size: 20px;
+  overflow: hidden;
 }
 header>ul>li:last-child{
   margin-right: 0;
@@ -89,19 +97,23 @@ header>#lang{
 
 /* main */
 main{
+  max-width: 1800px;
+  max-height: 513px;
   background-image: url(./img/img001.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  /* background-size: 100%; */
   background-position: center;
-  padding: 80px;
+  padding: 3%;
 }
 main .main-text{
   margin: auto;
-  margin-bottom: 80px;
+  margin-bottom: 8%;
 }
 main .main-menu{
-  width: 960px;
-  height: fit-content;
+  width: 53.33%;
+  /* 960/1800*100= 53.333 */
+  height: 25.34%;
+  /* 130/513*100 = 25.341*/
   margin: auto;
   opacity: 90%;
   text-align: center;
@@ -109,9 +121,12 @@ main .main-menu{
   display: flex;
 }
 main .main-menu .menu-box{
-  width: 160px;
-  height: 130px;
-  padding: 25px;
+  width: 16.67%;
+  /* 160/960*100 = 16.666*/
+  /* height: 100%; */
+  /* 130/960*100 = 13.541 */
+  padding: 2.6%;
+  /* 25/960*100 =2.604 */
   background-color: skyblue;
 }
 main .main-menu .menu-box:first-child{
@@ -121,22 +136,38 @@ main .main-menu .menu-box:last-child{
   background-color: green;
 }
 main .main-menu .menu-box a{
-  width: 110px;
+  margin: auto;
+  width: 68.75%;
   /* 160-25*2 = 110 */
-  height: 80px;
+  /* 110/160*100 = 68.75 */
+  height: 61.54%;
   /* 130-25*2 = 80 */
+  /* 80/130*100 = 61.538 */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 main .main-menu .menu-box a img{
   margin: auto;
-  width: 45px;
+  width: 48.13%;
+  /* 45/160*100 = 48.125 */
 }
 main .main-menu .menu-box a p{
   color: white;
 }
 /* /main */
+
+/* mobile */
+@media screen and (max-width: 960px){
+  main .main-menu{
+    width: 50%;
+    flex-wrap: wrap;
+  }
+
+  main .main-menu .menu-box{
+    width: 33.33%;
+  }
+}
 
 /* section */
 section{
@@ -185,7 +216,7 @@ section table tr td ul li p:last-child{
 
 /* footer */
 footer{
-  width: 1200px;
+  max-width: 1200px;
   height: 70px;
   margin: auto;
   color: gray;
@@ -200,17 +231,22 @@ footer .footer-logo .footer-logoimg{
   transform: translate(0,-50%);
 }
 footer .footer-text{
+  max-width: 480px;
   float: left;
   height: 50px;
-  margin: 10px 30px;
+  margin-left: 1.67%;
+  /* 20/1200*100=1.666 */
+  position: relative;
+  top: 50%;
+  transform: translate(0,-50%);
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 footer .footer-text .f-t-t{
-  width: 460px;
   font-weight: 700;
+  font-size: 13px;
 }
 footer .footer-text .f-t-t p{
   float: left;
@@ -219,7 +255,7 @@ footer .footer-text .f-t-t a{
   float: right;
 }
 footer .footer-text p:last-child{
-  font-size: 11px;
+  font-size: 10px;
 }
 
 footer .footer-site{
@@ -234,7 +270,8 @@ footer .footer-site .footer-sns{
   transform: translate(0,-60%);
 }
 footer .footer-site #site{
-  width: 100px;
+  min-width: 100px;
+  /* 100/1200*100 =8.33 */
   height: 30px;
   background-color: #333235;
   border: 1px solid white;
@@ -246,5 +283,17 @@ footer .footer-site #site{
   top: 50%;
   transform: translate(0,-50%);
 }
-
+@media screen and (max-width: 960px){
+  footer .footer-logo{
+    display: none;
+  }
+  footer .footer-text{
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+  footer .footer-site{
+    display: none;
+  }
+}
 /* /footer */
