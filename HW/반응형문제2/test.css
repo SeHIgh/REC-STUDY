@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+/* font-family: 'Lilita One', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+ */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{display: block; max-width: 100%;}
+figure{width: fit-content; height: fit-content;}
+
+body{
+  font-size: 14px;
+  font-family: 'Lilita One', cursive;
+}
+
+/* main */
+  /* header */
+    main header{
+      width: 100vw;
+      height: 5vh;
+      padding: 0 5%;
+
+      display: flex;
+      justify-content: space-between;
+    }
+    main header .head-logo a h1{
+      line-height: 5vh;
+    }
+    main header ul{
+      width: 25%;
+
+      display: flex;
+      justify-content: space-between;
+    }
+    main header ul li{
+      line-height: 5vh;
+    }
+  /* /header */
+
+  /* 1024px 이하 */
+  @media screen and (max-width: 1024px) {
+    main header{
+      height: 20vh;
+      text-align: center;
+
+      background-color: rgba(255,255,255, 0.5);
+
+      flex-direction: column;
+      justify-content: space-around;
+    };
+    main header .head-logo a h1{
+    }
+    main header ul{
+      width: 50%;
+
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+    }
+    main header ul li{
+    }
+  }
+
+  main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/mainbg.png);
+    background-repeat: no-repeat;
+  }
+  /* 1024px 이하 */
+  @media screen and (max-width: 1024px){
+    main{
+      background-size: auto;
+    }
+  }
+  main .main-box{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  main .title{
+    font-size: 85px;
+
+    color: #6399f7;
+  }
+  main p{
+    margin-top: 3vh;
+    
+    color: #6399f7;
+  }
+/* /main */
+
+/* section */
+  section{
+    width: 100%;
+    height: 190vh;
+    background-color: white;
+  }
+  section .section-grid{
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 38vh);
+  }
+  /* menu */
+  section .menu{
+    grid-column: 1/span 2;
+    grid-row: 1/span 3;
+
+    padding: 10vh;
+  }
+  section .menu .menu-text{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+  section .menu .menu-text h3{
+    font-size: 30px;
+  }
+  section .menu .menu-text p{
+    margin: 1vh 0;
+    font-size: 10px;
+  }
+  section .menu .menu-grid{
+    width: 55vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1vw;
+  }
+  section .menu .menu-grid .menu-box{
+    background-color: pink;
+    border-radius: 50%;
+  }
+  /* /menu */
+  section .grid-1{
+    padding: 5vh;
+    
+    background-image: url(./img/gridleftBg.png);
+
+    grid-column: 1;
+    grid-row: 4/span 2;
+  }
+  section .grid-1 h1{
+    font-size: 80px
+  }
+  section .grid-1 p{
+    font-size: 24px;
+  }
+  section .grid-1 ul{
+    margin-top: 3vh;
+  }
+  section .grid-1 ul li{
+    margin-left: 2vh;
+    margin-top: 2vh;
+    list-style: circle;
+  }
+
+  section .grid-2{
+    padding: 5vh;
+
+    background-image: url(./img/gridrightBg_1.png);
+
+    color: white;
+
+    grid-column: 2;
+    grid-row: 4;
+  }
+  section .grid-2 h2{
+    font-size: 40px;
+  }
+  section .grid-2 a{
+    display: block;
+    margin-top: 1vh;
+    width: 150px;
+    height: 30px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 10px;
+    line-height: 30px;
+  }
+
+  section .grid-3{
+    padding: 5vh;
+
+    background-image: url(./img/gridrightBg_2.png);
+
+    color: hotpink;
+
+    grid-column: 2;
+    grid-row: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  section .grid-3 h2{
+    font-size: 40px;
+  }
+  section .grid-3 .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  section .grid-3 .links .quick-box a{
+    text-align: center;
+  }
+  section .grid-3 .links .quick-box a .icon{
+    font-size: 40px;
+    margin: 1vh;
+  }
+  section .grid-3 .links .quick-box a .txt{
+    font-size: 12px;
+  }
+   /* 1024px 이하 */
+   @media screen and (max-width: 1024px){
+    section .menu{
+      grid-column: 1/span 2;
+      grid-row: 1/span 5;
+  
+      padding: 10vh;
+    }
+    section .menu .menu-text{
+      margin: auto;
+      text-align: center;
+      margin-bottom: 2vh;
+    }
+    section .menu .menu-text h3{
+      font-size: 30px;
+    }
+    section .menu .menu-text p{
+      margin: 1vh 0;
+      font-size: 10px;
+    }
+    section .menu .menu-grid{
+      width: 55vw;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 1vw;
+    }
+    section .menu .menu-grid .menu-box{
+      background-color: pink;
+      border-radius: 50%;
+    }
+    section .grid-1{
+      padding: 5vh;
+      
+      background-image: url(./img/gridleftBg.png);
+  
+      grid-column: 1/span 2;
+      grid-row: 4;
+    }
+    section .grid-1 h1{
+      font-size: 80px
+    }
+    section .grid-1 p{
+      font-size: 24px;
+    }
+    section .grid-1 ul{
+      margin-top: 3vh;
+    }
+    section .grid-1 ul li{
+      margin-left: 2vh;
+      margin-top: 2vh;
+      list-style: circle;
+    }
+  
+    section .grid-2{
+      padding: 5vh;
+  
+      background-image: url(./img/gridrightBg_1.png);
+  
+      color: white;
+  
+      grid-column: 1;
+      grid-row: 5;
+    }
+    section .grid-2 h2{
+      font-size: 40px;
+    }
+    section .grid-2 a{
+      display: block;
+      margin-top: 1vh;
+      width: 150px;
+      height: 30px;
+      border: 1px solid white;
+      text-align: center;
+      font-size: 10px;
+      line-height: 30px;
+    }
+  
+    section .grid-3{
+      padding: 5vh;
+  
+      background-image: url(./img/gridrightBg_2.png);
+  
+      color: hotpink;
+  
+      grid-column: 2;
+      grid-row: 5;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    section .grid-3 h2{
+      font-size: 40px;
+    }
+    section .grid-3 .links{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    section .grid-3 .links .quick-box a{
+      text-align: center;
+    }
+    section .grid-3 .links .quick-box a .icon{
+      font-size: 40px;
+      margin: 1vh;
+    }
+    section .grid-3 .links .quick-box a .txt{
+      font-size: 12px;
+    }
+  }
+/* /section */
+
+/* footer */
+  footer{
+    font-size: 12px;
+    text-align: center;
+    height: 10vh;
+    line-height: 10vh;
+    color: white;
+    background-color: #3B404B;
+  }
+/* /footer */
