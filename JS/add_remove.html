@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add+remove</title>
+  <style>
+    .color{
+      color: red;
+    }
+    .bg{
+      background-color: sienna;
+    }
+  </style>
+  <script src="../jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+      $("h1").addClass("color")
+
+      $("h1").mouseover(function() {
+        // removeClass = 클래스 제거시 사용
+        $("h1").removeClass("color")
+      })
+    });
+  </script>
+</head>
+<body>
+  <h1>.addClass()</h1>
+  <p>
+    선택한 요소에 클래스를 추가
+  </p>
+</body>
+</html>
