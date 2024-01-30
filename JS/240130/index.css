@@ -125,7 +125,7 @@ main .main_1 .mainbox p{
   font-size: 12px;
 }
 
-main .main_2{
+main #main_2{
   background-image: url(./img/bg1.jpg);
   background-size: 100%;
   height: 90vh;
