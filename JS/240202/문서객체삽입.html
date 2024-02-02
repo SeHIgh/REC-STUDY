@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>문서객체삽입</title>
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    ul, li{
+    ul,
+    li {
       list-style: none;
     }
-    ul{
-      overflow: hidden;
+
+    .box{
       width: 50vw;
       height: 30px;
-      border: 3px dotted red;
+      border: 3px solid greenyellow;
+
+      /* overflow: hidden; */
     }
   </style>
   <script src="../../jquery-3.7.1.min.js"></script>
   <script>
-    $(function(){
+    $(function () {
 
       // 문서객체삽입
 
@@ -42,32 +46,87 @@
 
       // $("ul li:nth-child(3)").appendTo('ul li:nth-child(1)')
       // $("ul li:last-child").prependTo('ul')
-      
+
       // $("ul li:nth-child(1)").insertAfter('ul li:last-child')
       // $("ul li:nth-child(1)").insertBefore('ul li:last-child')
 
-      let textslide = setInterval(()=>{
+      // let textslide = setInterval(() => {
 
-        // 둘다 실시간 검색어 혹은 뉴스 헤드라인이 계속 바뀌는걸 보여줄 수 있음 
-        // 1.
-        $("ul li").first().insertAfter("ul li:last-child")
-        // 2.
-        // $("ul li").first().css({
-        //   marginTop:'-20px'
-        // })
+      //   // 둘다 실시간 검색어 혹은 뉴스 헤드라인이 계속 바뀌는걸 보여줄 수 있음 
+      //   // 1.
+      //   // $("ul li").first().insertAfter("ul li:last-child")
+      //   // 2.
+      //   // $("ul li").first().css({
+      //   //   marginTop:'-20px'
+      //   // })
 
-      },2000);
+      //   $(".box ul").animate({marginTop:'-20px'},function(){
+      //     $(".box ul").append($(".box ul li:eq(0)")).css({marginTop:'0'})
+      //   })
+      // }, 2000);
+
+      // 글자조작
+      // 문서객체.textContent > 글자 조작
+      // 문서객체.innerHTML > 형태 조작
+
+      // title.textContent = '<a href="#">안녕</a>'
+      // title.innerHTML = '<a href="#">안녕</a>'
+      
     });
   </script>
 </head>
+
 <body>
-  <ul>
-    <li>메뉴 -1</li>
-    <li>메뉴 -2</li>
-    <li>메뉴 -3</li>
-    <li>메뉴 -4</li>
-    <li>메뉴 -5</li>
-    <li>메뉴 -6</li>
-  </ul>
+  <!-- <div class="box">
+    <ul>
+      <li>메뉴 -1</li>
+      <li>메뉴 -2</li>
+      <li>메뉴 -3</li>
+      <li>메뉴 -4</li>
+      <li>메뉴 -5</li>
+      <li>메뉴 -6</li>
+    </ul>
+  </div> -->
+  <h1>제목</h1>
+  <p>설명</p>
+
+  <button class="b1">1</button>
+  <button class="b2">2</button>
+  <button class="b3">3</button>
+  <script>
+    let title = document.querySelector("h1");
+    let text = document.querySelector("p");
+
+    let b1 = document.querySelector(".b1")
+    let b2 = document.querySelector(".b2")
+    let b3 = document.querySelector(".b3")
+
+    let 제품1 = {
+      제목 : '제품제목1',
+      설명 : '제품1 에 대한 설명',
+    }
+    let 제품2 = {
+      제목 : '제품제목2',
+      설명 : '제품2 에 대한 설명',
+    }
+    let 제품3 = {
+      제목 : '제품제목3',
+      설명 : '제품3 에 대한 설명',
+    }
+
+    b1.addEventListener('click',()=>{
+      title.textContent = 제품1['제목']
+      text.textContent = 제품1['설명']
+    });
+    b2.addEventListener('click',()=>{
+      title.textContent = 제품2['제목']
+      text.textContent = 제품2['설명']
+    });
+    b3.addEventListener('click',()=>{
+      title.textContent = 제품3['제목']
+      text.textContent = 제품3['설명']
+    });
+  </script>
 </body>
+
 </html>
