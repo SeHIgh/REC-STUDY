@@ -5,11 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>문서객체삽입</title>
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     ul, li{
       list-style: none;
     }
     ul{
+      overflow: hidden;
       width: 50vw;
+      height: 30px;
       border: 3px dotted red;
     }
   </style>
@@ -36,7 +43,20 @@
       // $("ul li:nth-child(3)").appendTo('ul li:nth-child(1)')
       // $("ul li:last-child").prependTo('ul')
       
-      $("ul li:nth-child(1)").insertAfter('ul li:last-child')
+      // $("ul li:nth-child(1)").insertAfter('ul li:last-child')
+      // $("ul li:nth-child(1)").insertBefore('ul li:last-child')
+
+      let textslide = setInterval(()=>{
+
+        // 둘다 실시간 검색어 혹은 뉴스 헤드라인이 계속 바뀌는걸 보여줄 수 있음 
+        // 1.
+        $("ul li").first().insertAfter("ul li:last-child")
+        // 2.
+        // $("ul li").first().css({
+        //   marginTop:'-20px'
+        // })
+
+      },2000);
     });
   </script>
 </head>
