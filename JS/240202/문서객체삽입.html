@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문서객체삽입</title>
+  <style>
+    ul, li{
+      list-style: none;
+    }
+    ul{
+      width: 50vw;
+      border: 3px dotted red;
+    }
+  </style>
+  <script src="../../jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+
+      // 문서객체삽입
+
+      // append 뒷부분, prepend 앞부분
+      // before 앞추가 - 밖, after 뒷추가 - 밖
+
+      // $("ul li:nth-child(1)").append('안녕')
+      // $("ul li:nth-child(1)").prepend('안녕')
+
+      // $("ul li:nth-child(1)").before("<li>aa</li>")
+      // $("ul li:nth-child(1)").after("<li>bb</li>")
+
+      // 문서객체이동
+
+      // appendTo 뒷부분이동 , prependTo 앞부분이동
+      // insertAfter 뒷추가, insertBefore 앞추가
+
+      // $("ul li:nth-child(3)").appendTo('ul li:nth-child(1)')
+      // $("ul li:last-child").prependTo('ul')
+      
+      $("ul li:nth-child(1)").insertAfter('ul li:last-child')
+    });
+  </script>
+</head>
+<body>
+  <ul>
+    <li>메뉴 -1</li>
+    <li>메뉴 -2</li>
+    <li>메뉴 -3</li>
+    <li>메뉴 -4</li>
+    <li>메뉴 -5</li>
+    <li>메뉴 -6</li>
+  </ul>
+</body>
+</html>
