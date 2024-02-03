@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Merriweather', serif;
+font-family: 'Noto Sans KR', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{text-decoration: none; color: inherit;}
+img{display: block; max-width: 100%;}
+figure{width: fit-content; height: fit-content;}
+ul,li{list-style: none;}
+body{
+	font-size: 14px;
+	font-family: 'Merriweather', serif, 'Noto Sans KR', sans-serif;
+  background-color: #F0EDE6;
+}
+p:lang(ko){
+  font-family: 'Noto Sans KR', sans-serif;
+}
