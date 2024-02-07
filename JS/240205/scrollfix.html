@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scroll2</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .mainV {
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+    }
+
+    header {
+      width: 100%;
+      height: 100px;
+      border-bottom: 1px solid #000;
+      background-color: #000;
+      color: #fff;
+      position: fixed;
+      top: -100px;
+      left: 0;
+      animation: top 0.5s;
+    }
+
+    .fix {
+      background-color: #000;
+      color: #fff;
+      position: fixed;
+
+    }
+
+    @keyframes top {
+      100% {
+        top: 0;
+      }
+    }
+
+    header .headeri {
+      max-width: 1200px;
+      padding: 0 30px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .headeri ul {
+      display: flex;
+    }
+
+    header .headeri ul li {
+      margin-left: 30px;
+    }
+
+    .contents {
+      max-width: 1000px;
+      margin: 100px auto;
+      padding: 0 30px;
+      text-align: center;
+    }
+
+    .contents p {
+      line-height: 200%;
+      margin-bottom: 50px;
+    }
+  </style>
+  <script src="../../jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      // offset().top > 선택한요소의 기준위치를 찾는
+
+      let win = $(window)
+      let header = $("header")
+      let spot = header.offset().top
+      console.log(spot) 
+
+      win.scroll(function(){
+        if(win.scrollTop()>spot){
+          header.addClass("fix");
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="mainV"></div>
+
+  <header>
+    <div class="headeri">
+      <h1>Logo</h1>
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="contents">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nisi explicabo rem. Cupiditate ut tempora
+      voluptates eum ipsum enim in exercitationem impedit quidem, facilis hic. Excepturi distinctio sequi a dolorum?
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores iusto rem harum animi porro fuga quos, sit ex accusamus perferendis similique enim sint minus, distinctio libero vel ipsa odit debitis!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente praesentium at pariatur quas magni tempora dolorem eos labore, deserunt, similique aperiam. Tempore porro, iusto optio minus cupiditate reprehenderit nisi perferendis.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus commodi ratione omnis fugit, magnam quis quibusdam eligendi rerum voluptatum impedit fuga eius quos, dolorem ipsa aut, amet quae veniam adipisci?
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus pariatur eius repudiandae dolore tempore exercitationem soluta laboriosam quae atque consequatur odit optio, asperiores reprehenderit veritatis dignissimos, illo nostrum saepe. Fugit!
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima similique repellat tempore ab! Eum accusantium rem autem quisquam tenetur. Dignissimos eveniet quidem maxime sequi asperiores voluptatibus nihil odio ullam ratione!
+    </p>
+  </div>
+
+</body>
+
+</html>
