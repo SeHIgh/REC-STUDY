@@ -7,7 +7,12 @@
 
 #ifndef BetweenAdder_hpp
 #define BetweenAdder_hpp
+class BetweenAdder{
+public:
+    ~BetweenAdder(){}
+    BetweenAdder();
+};
 
 #include <stdio.h>
-
+#include <iostream>
 #endif /* BetweenAdder_hpp */

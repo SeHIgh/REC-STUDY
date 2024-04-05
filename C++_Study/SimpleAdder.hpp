@@ -8,6 +8,12 @@
 #ifndef SimpleAdder_hpp
 #define SimpleAdder_hpp
 
-#include <stdio.h>
+class SimpleAdder{
+public:
+    ~SimpleAdder(){}
+    SimpleAdder();
+};
 
+#include <stdio.h>
+#include <iostream>
 #endif /* SimpleAdder_hpp */

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		716AA2EE2BC0106100627F72 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 716AA2ED2BC0106100627F72 /* main.cpp */; };
+		716AA2FD2BC0133600627F72 /* SimpleAdder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 716AA2FB2BC0133600627F72 /* SimpleAdder.cpp */; };
+		716AA3002BC017C100627F72 /* BetweenAdder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 716AA2FE2BC017C100627F72 /* BetweenAdder.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		716AA2EA2BC0106100627F72 /* C++_Study */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++_Study"; sourceTree = BUILT_PRODUCTS_DIR; };
 		716AA2ED2BC0106100627F72 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		716AA2FB2BC0133600627F72 /* SimpleAdder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleAdder.cpp; sourceTree = "<group>"; };
+		716AA2FC2BC0133600627F72 /* SimpleAdder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SimpleAdder.hpp; sourceTree = "<group>"; };
+		716AA2FE2BC017C100627F72 /* BetweenAdder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BetweenAdder.cpp; sourceTree = "<group>"; };
+		716AA2FF2BC017C100627F72 /* BetweenAdder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BetweenAdder.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				716AA2ED2BC0106100627F72 /* main.cpp */,
+				716AA2FB2BC0133600627F72 /* SimpleAdder.cpp */,
+				716AA2FC2BC0133600627F72 /* SimpleAdder.hpp */,
+				716AA2FE2BC017C100627F72 /* BetweenAdder.cpp */,
+				716AA2FF2BC017C100627F72 /* BetweenAdder.hpp */,
 			);
 			path = "C++_Study";
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716AA2FD2BC0133600627F72 /* SimpleAdder.cpp in Sources */,
+				716AA3002BC017C100627F72 /* BetweenAdder.cpp in Sources */,
 				716AA2EE2BC0106100627F72 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

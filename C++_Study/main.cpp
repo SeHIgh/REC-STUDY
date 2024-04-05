@@ -6,9 +6,13 @@
 //
 
 #include <iostream>
+#include "BetweenAdder.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
+    
+    new BetweenAdder();
+    
     return 0;
 }
