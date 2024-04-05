@@ -6,13 +6,11 @@
 //
 
 #include <iostream>
-#include "BetweenAdder.hpp"
+#include "Q01_2_1.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
     
-    new BetweenAdder();
+    new SWAP();
     
     return 0;
 }

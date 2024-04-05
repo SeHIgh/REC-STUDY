@@ -8,6 +8,15 @@
 #ifndef Q01_2_1_hpp
 #define Q01_2_1_hpp
 
-#include <stdio.h>
+class SWAP{
+public:
+    SWAP();
+    void swap(int* a, int* b);
+    void swap(char* a, char* b);
+    void swap(double* a, double* b);
+};
 
+
+#include <stdio.h>
+#include <iostream>
 #endif /* Q01_2_1_hpp */
