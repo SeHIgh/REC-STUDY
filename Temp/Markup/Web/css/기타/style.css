@@ -1,0 +1,8 @@
+/*style 태그 안의 공간이라 생각 하면됨.*/
+@import url(app.css);
+
+h2{
+  background-color: aqua;
+  color: brown;
+  font-size: 50px;
+}

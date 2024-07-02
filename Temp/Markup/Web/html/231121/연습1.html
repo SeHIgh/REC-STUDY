@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float Practice</title>
+  <style>
+    /* 전체 선택자 초기화 필수!*/
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .box{
+      text-align: center;
+      font-size: 40px;
+      width: 325px;
+      height: 325px;
+      padding: 8px;
+      margin: 14px;
+      border: 3px solid skyblue;
+      float: left;
+    }
+    .allbox{
+      /* w: 325+p(8+8)+b(3+3)+m(14+14) = 375 *3 */
+      /* h: 325+p(8+8)+b(3+3)+m(14+14) = 375 *2 */
+      width: 1125px;
+      height: 750px;
+      background-color: pink;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="allbox">
+    <div class="box">325*325<br>padding: 8px<br>margin:14px<br>border: 3px</div>
+    <div class="box">325*325<br>padding: 8px<br>margin:14px<br>border: 3px</div>
+    <div class="box">325*325<br>padding: 8px<br>margin:14px<br>border: 3px</div>
+    <div class="box">325*325<br>padding: 8px<br>margin:14px<br>border: 3px</div>
+    <div class="box">325*325<br>padding: 8px<br>margin:14px<br>border: 3px</div>
+    <div class="box">325*325<br>padding: 8px<br>margin:14px<br>border: 3px</div>
+  </div>
+</body>
+</html>

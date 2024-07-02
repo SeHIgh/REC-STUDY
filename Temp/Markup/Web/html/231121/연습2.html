@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습2</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      /* box-sizing: border-box; */
+    }
+    #logo{
+      width: 550px;
+      height: 300px;
+      margin: 30px auto;
+      background-color: orange;
+    }
+    #menu{
+      width: 1390px;
+      height: 50px;
+      border: 3px solid blue;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    .box{
+      width: 300px;
+      height: 200px;
+      border: 2px solid red;
+      margin: 20px 10px;
+      padding: 10px 15px;
+      float: left;
+    }
+    #allbox{
+      /* w:300+b(2+2)+m(10+10)+p(15+15) = 354 * 4 */
+      /* w:300+m(10+10)+p(15+15) * 4 = 1280 */
+      /* border-box 적용시 border 제외 margin padding 값만 처리 */
+      width: 1416px;
+      /* h:200+b(2+2)+m(20+20)+p(10+10) = 264 * 2 */
+      /* h:200+m(20+20)+p(10+10) * 2 = 480 */
+      height: 480px;
+      margin: auto;
+      background-color: lavenderblush;
+    }
+  </style>
+</head>
+<body>
+  <!-- logo -->
+  <div id="logo"></div>
+  <!-- menu -->
+  <div id="menu"></div>
+  <!-- allbox -->
+  <div id="allbox">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+</html>

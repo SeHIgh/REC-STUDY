@@ -1,0 +1,32 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul, li{list-style: none;}
+
+.box{
+  width: 20%;
+  height: 350px;
+  float: left;
+  text-align: center;
+  line-height: 350px;
+  background-color: salmon;
+}
+.box:nth-child(2n){
+  background-color: seagreen;
+}
+
+@media screen and (max-width:1200px) {
+  .box{
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width:800px) {
+  .box{
+    width: 50%;
+    height: 500px;
+    margin-bottom: 30px;
+  }
+}
