@@ -1,0 +1,3 @@
+이벤트 리스트 및 아이콘
+Base.wz/UI/UIEventList.img/icon
+Base.wz/UI/UIEventList.img/backgrnd
