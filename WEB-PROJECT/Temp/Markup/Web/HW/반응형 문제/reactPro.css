@@ -1,0 +1,94 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul, li{
+  list-style: none;
+}
+a{text-decoration: none;color:inherit}
+img{display: block;}
+
+header{
+  width: 100%;
+  height: 100px;
+}
+
+header .logoBox{
+  position: relative;
+  top: 25%;
+  width: fit-content;
+  margin-left: 60px;
+  text-align: center;
+  color: blue;
+  border: 3px solid blue;
+  border-bottom: 3px solid green;
+  border-left: 3px solid green;
+  float: left;
+}
+
+header ul{
+  position: relative;
+  top: 25%;
+  margin-left: 20px;
+  margin-right: 60px;
+  float: right;
+}
+header ul li{
+  font-size: 24px;
+  margin-right: 60px;
+  float: left;
+}
+
+header ul .button{
+  font-size: 24px;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  background-color: gray;
+  border: none;
+  padding:5px;
+  min-height:30px; 
+  min-width: 120px;
+}
+header ul .button:hover{
+  background-color: blue;
+}
+
+section{
+  width: 100%;
+  height: 500px;
+  padding: 50px;
+  background-color: khaki;
+}
+
+section h1{
+  font-size: 40px;
+  color:white;
+  text-align: center;
+}
+
+section .box{
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  margin-top: 50px;
+  padding: 20px;
+  float: left;
+  background-color: white;
+}
+section .box img{
+  margin: auto;
+}
+section .box .title{
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+  background-color: yellow;
+}
+section .box .text{
+  margin-top: 20px;
+  color: gray;
+  text-align: center;
+  background-color: pink;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css기초선택자</title>
+  <style>
+    *{
+      /* 기본값이 일정하지 않은 경우가 많아
+      일부러 0으로 초기화 시켜두고 사용함! */
+      margin: 0;
+      /* margin : 바깥여백 */
+      padding: 0;
+      /* padding : 안쪽여백 */
+    }
+    h2{
+      color:violet;
+      margin-bottom: 10px;
+    }
+    h1{
+      margin-bottom: 40px;
+    }
+    p{
+      margin-bottom: 40px;
+    }
+    #title{
+      color: slateblue;
+    }
+    .text{
+      color: seagreen;
+    }
+    .a{
+      background-color: salmon;
+    }
+    .c{
+      color: brown;
+    }
+    /* 
+      속성부여시 중첩되었을 경우 제일 최신코드(아래코드)가 적용 
+      
+    */
+  </style>
+</head>
+<body>
+  
+  <h1>기초선택자 4가지</h1>
+  
+  <h2> 전체선택자 </h2>
+  <p>
+    */ html 내에 등장하는 모든 형태를 선택하는 선택자(초기화값, 기본설정값 적용)(개별적 세팅 X)
+  
+  </p>
+  <h2> 태그선택자 </h2>
+  <p>
+    태그이름 / html 내에 등장하는 특정한 태그를 모두 선택하는 선택자 (태그의 기본속성을 적용)
+  </p>
+
+  <!-- 중요!!!!! -->
+  <h2 id="title"> 아이디선택자 </h2>
+  <p>
+    본문(id="이름") / 스타일 (#이름) <br>
+    특정한 이름을 부여하여 선택하는 선택자로,
+    하나의 이름만 부여가능 / 주로 큰단락,
+    제일 큰 부모박스에서 사용
+  </p>
+
+  <h2 class="text a b c"> 클래스선택자 </h2>
+  <!-- text, a, b, c 모두를 클래스 이름으로 가짐! -->
+  <p>
+    본문(class="이름") / 스타일 (.이름) <br>
+    특정한 이름을 부여하여 선택하는 선택자로,
+    선택자에 여러개의 이름을 부여 가능 / 주로 작은 단락
+    , 변화가 잦은 요소 사용
+  </p>
+</body>
+</html>

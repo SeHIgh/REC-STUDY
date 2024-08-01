@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script>
+    const root = document.getElementById("root");
+    const span = React.createElement(
+        "span", //태그
+        { id: "sexy-span", style: {color: "cyan"} }, // {}안에 property
+        "Hello My Name is Sexy Span~!" // inner Text
+    );
+    // 사용자 화면에 보여주는 역할
+    ReactDOM.render(span, root);
+
+</script>
+
+</html>

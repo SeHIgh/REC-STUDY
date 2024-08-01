@@ -1,0 +1,56 @@
+header{
+    width: 100%;
+    height: 100px;
+    background-color: greenyellow;
+}
+//헤더영역의 내용물 박스
+header .headeri{
+    width: 1400px;
+    height: 100%;
+    margin: auto;
+    background-color: pink;
+}
+//메인 로고
+header .headeri h1{
+    width: 250px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    /* 위에서 40px 띄움 */
+    text-align: center;
+    background-color: blue;
+    margin: 30px;
+    float: left;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: gold;
+}
+//메인 로고 안 특정 텍스트 꾸미기
+header .headeri h1 span{
+    color: #fff;
+}
+//ul 메뉴목록
+header .headeri ul{
+    width: 870px;
+    height: 40px;
+    margin: 30px;
+    float: right;
+    margin: 30px;
+    background-color: blue;
+}
+header .headeri ul li{
+    float: left;
+    width: 150px;
+    /* ((ul의 전체 width: 870) - (li 사이 margin: 30px * 4(5개니까 사이 공간: 4)) / 5 */
+    line-height: 40px;
+    margin-left: 30px;
+    text-decoration: underline;
+    text-align: center;
+    color: #fff;
+    background-color: darkcyan;
+    border-radius: 10px;
+    /* 모서리 둥글게 */
+}
+header .headeri ul li:first-child{
+    margin-left: 0;
+}

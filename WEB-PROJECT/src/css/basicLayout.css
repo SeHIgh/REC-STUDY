@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+figure {
+    width: fit-content;
+    height: fit-content;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Noto Sans', snas-serif;
+    /* font-family 는 자유 */
+}

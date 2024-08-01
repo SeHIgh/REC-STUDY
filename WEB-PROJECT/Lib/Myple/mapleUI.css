@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* PROFILE UI */
+.main-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(72, 82, 74, 0.8) 10%, rgba(72, 82, 74, 0.8) 90%);
+  background-color: rgba(72, 82, 74, 0.8);
+  /*for browsers that don't support gradients */
+
+  box-shadow: 2px 2px 2px gray;
+}
+
+.main-box>.text-box {
+  width: 100%;
+  height: 30%;
+}
+
+.main-box>.text-box>.lv {
+  display: inline-block;
+
+  margin: 5px 35px;
+  color: #FFCC00;
+  font-weight: 600;
+}
+
+.main-box>.text-box>.name {
+  display: inline-block;
+
+  margin: 5px 60px;
+  color: white;
+}
+
+.main-box>.bar-box {
+  width: 100%;
+  height: 70%;
+
+  padding: 7px 7px;
+
+  border-radius: 10px;
+  background: linear-gradient(to top, #CBCBCB 40%, #F0F0F0 60%);
+}
+
+.main-box>.bar-box>.mini-box {
+  width: 100%;
+  height: 50%;
+  padding: 3px;
+}
+
+.main-box>.bar-box>.mini-box>.text {
+  float: left;
+  display: inline-block;
+  width: 10%;
+
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #767676;
+}
+
+.main-box>.bar-box>.mini-box>.HP {
+  float: left;
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+
+  background: linear-gradient(to bottom, #F32C64 0%, #F880A2 30%, #F32C64 50%);
+
+  border-radius: 5px;
+}
+
+.main-box>.bar-box>.mini-box>.MP {
+  float: left;
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+
+  background: linear-gradient(to bottom, #08B6E0 0%, #68D2EB 30%, #08B6E0 50%);
+
+  border-radius: 5px;
+}
+
+/* PROFILE UI // */
