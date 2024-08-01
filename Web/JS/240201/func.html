@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>function</title>
+  <script>
+    /*
+
+    익명함수 : 이름이 붙어있지 않는 함수
+
+    function(){}
+
+    익명함수선언
+    let 함수 = function(){};
+
+    함수(); 
+    
+    !!호출을 무조건 해줘야 실행이 되겠지?
+
+    선언적함수 : 이름이 있는 함수
+
+    function 함수 () {}
+
+    함수();
+
+    */
+
+    // function 반복 (a) {
+    //   for(let i=1; i<=a; i++){
+    //     console.log(i)
+    //   }
+    // }
+
+    // 반복(10);
+    
+
+    /*
+    매개변수: 특정한 값을 입력을 해서 함수에 전달하고
+    함수에서는 그 값을 받아서 실행
+    함수 외부에서 내부로 데이터를 전달할 때 매개체 역할을 하는 변수
+
+    function 함수(매개변수){ }
+
+    함수(매개변수의 값)
+
+    */
+    // function 곱하기(a, b) {
+    //   console.log(a * b)
+    // }
+    // 곱하기(3, 5);
+
+    // let q = prompt()
+    // // 브라우저에서 데이터 내부로 값(글자데이터)을 전달 받는 키워드
+    // console.log(q)
+
+    // let p = Number(prompt())
+    // // 숫자 만을 전달받는 프롬프트
+    // console.log(p)
+
+    /*
+    타이머 함수
+
+    setTimeout(함수, 시간) 특정시간 후에 함수를 한번 호출
+    setInterval(함수, 시간) 특정시간 마다 함수를 호출
+
+    clearTimeout(이름)
+    clearInterval(이름)
+
+    funtion(){} >>>>> ()=>{} 화살표함수
+
+    */
+
+    let a = setTimeout(()=>{
+      console.log("2초후에 등장")
+    },2000);
+    
+    clearTimeout(a);
+
+    let b = setInterval(()=>{
+      console.log("1초마다 등장")
+      console.log('\n')
+    },1000);
+
+    clearInterval(b);
+
+    // 문제)
+    // 1초마다 글자가 나타나다가 10초 후에 종료
+
+    let c = setInterval(()=>{
+      console.log("안뇽")
+      console.log('\n')
+    },1000);
+
+    let d = setTimeout(()=>{
+      clearTimeout(c);
+    },10000);
+
+  </script>
+</head>
+<body>
+</body>
+</html>

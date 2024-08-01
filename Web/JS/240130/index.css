@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding|Raleway');
+/*
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Nanum Gothic Coding', monospace;
+*/
+*{padding: 0; margin: 0; box-sizing: border-box;}
+a{text-decoration: none; color: inherit;}
+img{display: block; max-width: 100%;}
+
+/* figure{width: fit-content; height: fit-content;} */
+/* 이번에 fit-content안줌
+잡은 영역에서의 figure 사이즈를 따로 줘야하기 때문에... */
+
+ul,li{list-style: none;}
+body{
+  position: relative;
+
+	font-size: 14px;
+	font-family: 'Raleway', sans-serif;
+  font-family: 'Nanum Gothic Coding', monospace;
+
+  display: grid;
+
+  grid-template-columns: 180px;
+  /* 2칸 */
+  /* 알아보기... 2번째 칸을 100%에서 180px만 빼는법 */
+  /* 지금 상태로는 1번째 칸만 180px로 지정되어 있고 */
+  /* 나머지 1칸을 지정 안해준 상태인데 자동 지정이됨...? */
+  grid-template-rows: 190vh 10vh;
+  /* 2줄 */
+}
+
+/* header */
+header{
+  grid-column: 1;
+  grid-row: 1;
+
+  width: 180px;
+  height: 100%;
+  background-color: beige;
+
+  /* side header 기본 틀 */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header .logo{
+  margin-left: 14px;
+  /* (180 - 152)/2 = 14px */
+  margin-bottom: 14px;
+}
+header ul li{
+  line-height: 50px;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+}
+header ul li a{
+  margin-left: 20px;
+}
+/* //header */
+
+/* aside */
+aside{
+  width: 400px;
+  height: 100%;
+
+  /* side header 기본 틀 */
+  position: fixed;
+  top: 0;
+    /* 펼치기 전 close 상태 */
+  right: -400px;
+  z-index: 100;
+}
+aside .banner{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+aside .banner .box{
+  width: 50%;
+  height: 25%;
+}
+aside .btn{
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: -52px;
+  border: none;
+  background-color: #333;
+  cursor: pointer;
+  z-index: 101;
+}
+/* //aside */
+
+/* main */
+main{
+  grid-column: 2;
+  grid-row: 1;
+
+  z-index: 1;
+  position: relative;
+}
+main .main_1{
+  background-image: url(./img/bg2.jpg);
+  background-size: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+main .main_1 .mainbox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: fit-content;
+  color: white;
+}
+main .main_1 .mainbox h1{
+  font-size: 45px;
+  font-weight: 600;
+
+  margin-bottom: 5vh;
+}
+main .main_1 .mainbox p{
+  font-size: 12px;
+}
+
+main #main_2{
+  background-image: url(./img/bg1.jpg);
+  background-size: 100%;
+  height: 90vh;
+}
+/* //main */
+
+/* footer */
+footer{
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #333;
+  color: white;
+}
+footer p{
+  line-height: 10vh;
+  margin-left: 10px;
+}
+/* //footer */

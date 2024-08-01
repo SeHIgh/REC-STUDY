@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Merriweather', serif;
+font-family: 'Noto Sans KR', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+figure {
+  width: fit-content;
+  height: fit-content;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Merriweather', serif, 'Noto Sans KR', sans-serif;
+  background-color: #F0EDE6;
+}
+
+:lang(ko) {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* header */
+#header {
+  width: 100%;
+  height: 5rem;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+#header #logo {
+  width: 10rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#header #logo img {
+  margin: auto;
+  width: 70%;
+}
+
+#header nav {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#header nav #menu {
+  width: 70%;
+  height: 100%;
+}
+
+#header nav #menu ul {
+  width: 100%;
+  height: 100%;
+
+  line-height: 5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#header nav #nav_box {
+  width: 20%;
+  max-width: 130px;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+#header nav #nav_box #search_box {
+  width: 1.3rem;
+}
+
+#header nav #nav_box #buy_box {
+  max-width: 110px;
+  overflow: hidden;
+}
+
+#header nav #nav_box #buy_box a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header nav #nav_box #buy_box a span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#header nav #nav_box #buy_box a img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  #header {
+    padding: 0 3%;
+    justify-content: space-between;
+  }
+  #header nav {
+    width: 10%;
+    display: flex;
+    align-items: center;
+  }
+
+  #header nav #menu {
+    float: right;
+    width: 2.5rem;
+    height: 2.5rem;
+    content: url(./img/menu.png);
+    cursor: pointer;
+  }
+
+  #header nav #menu:hover{
+    transition-delay: 1000;
+    transform: scale(1.3, 1.3);
+  }
+
+  #header nav #menu ul {
+    display: none;
+  }
+
+  #header nav #nav_box {
+    float: right;
+  }
+
+  #header nav #nav_box #buy_box {
+    display: none;
+  }
+}
+
+/* //header */
+
+/* main */
+main{
+  width: 100%;
+  height: 150vh;
+  
+  /* background-color: aquamarine; */
+}
+main .main_visual_container{
+  position: relative;
+
+  margin: auto;
+  width: 80%;
+  max-width: 1200px;
+  height: 150vh;
+
+  text-align: center;
+
+  /* background-color: bisque; */
+}
+
+main .main_visual_container .main_visual_title{
+  position: absolute;
+  
+  width: 100%;
+  font-size: 5rem;
+
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 2;
+}
+
+main .main_visual_container .main_visual_img{
+  position: absolute;
+  
+  width: 100%;
+
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 0;
+}
+
+main .main_visual_container .main_visual_txt{
+  position: absolute;
+
+  padding: 5%;
+
+  width: 80%;
+  height: 150px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+
+  /* background-color: aliceblue; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main .main_visual_container .main_visual_txt .btn_basic{
+  margin: auto;
+  width: 300px;
+  height: 100px;
+  line-height: 60px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-top: 20px;
+
+  background-image: url('./img/button-basic-stroke.svg');
+  background-size: 100% 100%;
+
+  position: relative;
+}
+
+main .main_visual_container .main_visual_txt .btn_basic span{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/button-basic-fill.svg');
+  background-size: 100% 100%;
+  opacity: 0%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .main_visual_container .main_visual_txt .btn_basic span:hover{
+  opacity: 50%;
+}
+/* //main */

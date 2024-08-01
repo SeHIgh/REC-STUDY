@@ -1,0 +1,54 @@
+Donuts's
+brand
+menu
+store
+event
+
+Donuts's &
+Donut
+Friedcake by the various Supplementary
+material into the flour paste.
+
+Donuts's menuHappiness, Fun, Refreshment, Energy and Break...
+If need be, just enjoy them! In busy daily lives, Dunkin' will be a sweet friend to you.
+
+
+
+DONE EASY
+Find a store, place your order and
+get on your way with the Dunkin’ App
+
+Order ahead and pay from your phone
+Join DD Perks and earn points towards free beverages
+Earn exclusive offers and rewards
+
+
+SOMETHING FRESH IS
+ALWAYS BREWIN’
+HERE®
+view menu
+
+
+QUICK LINKS
+MOBILE APP
+ABOUT US
+CONTACT US
+COPYRIGHT Ⓒ 2022 minjeong COMPANY. ALL RIGHTS RESERVED.
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+/* font-family: 'Lilita One', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+ */
+
+https://fontawesome.com/
+
+<i class="fas fa-mobile-alt"></i>            
+<i class="fas fa-dot-circle"></i>
+<i class="far fa-address-book"></i>
+
+
+

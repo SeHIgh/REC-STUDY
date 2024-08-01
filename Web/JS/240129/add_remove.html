@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add+remove</title>
+  <style>
+    .color{
+      color: red;
+    }
+    .bg{
+      background-color: sienna;
+    }
+    .btn{
+      width: 300px;
+      height: 100px;
+      background-color: #ccc;
+      border-radius: 100px;
+      box-shadow: 1px 1px 5px #ccc;
+      margin: 50px;
+      padding: 20px;
+      position: relative;
+      transition: 0.6s;
+    }
+    .tog{
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 100%;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      transition: 0.6s;
+    }
+    .bg{
+      background-color: green;
+    }
+    .tog_r{
+      left:220px;
+    }
+  </style>
+  <script src="../jquery-3.7.1.min.js"></script>
+  <script>
+    // $(function(){
+    //   $("h1").addClass("color")
+
+    //   $("h1").mouseover(function() {
+    //     // removeClass = 클래스 제거시 사용
+    //     $("h1").removeClass("color")
+    //   })
+    //   $("p").click(function(){
+    //     $("p").addClass("bg")
+    //   })
+    // })
+    // toggleClass
+    // 요소의 클래스의 추가/제거 반복
+    // add+remove 반복 
+
+    $(function () {
+      $("p").click(function () {
+        $("p").toggleClass("bg")
+      });
+
+      $(".btn").click(function () {
+        $(".btn").toggleClass("bg")
+        $(".tog").toggleClass("tog_r")
+
+        if ($(".btn").hasClass("bg")) {
+          $("body").css({
+            backgroundColor: '#000',
+            color: '#fff'
+          })
+        } else {
+          $("body").css({
+            backgroundColor: '#fff',
+            color: '#000'
+          })
+        }
+      });
+      /*
+      hasClass
+      선택한 요소에 주어진 클래스가 있는지
+      확인하는 메서드로 확인 후
+      참과 거짓으로 구분
+      존재하면 참 없으면 거짓으로 변환 (boolean 타입)
+      */
+      // .attr('속성', '값') 속성접근 메서드
+      let img = $(".img")
+
+      // img.attr('src', 'm.webp')
+      img.on({
+        mouseover:function(){
+          img.attr('src','m.webp')
+        },
+        mouseout:function(){
+          img.attr('src','j.png')
+        }
+      })
+      // img.click(function () {
+      //   img.toggleClass("change")
+
+      //   if (img.hasClass("change")) {
+      //     img.attr('src', 'm.webp')
+      //   } else {
+      //     img.attr('src', 'j.png')
+      //   }
+      // });
+    });
+  </script>
+</head>
+<body>
+  <h1>.addClass()</h1>
+  <p>
+    선택한 요소에 클래스를 추가
+  </p>
+
+  <div class="btn">
+    <div class="tog"></div>
+  </div>
+
+  <img src="./j.png" alt="짱구" class="img">
+
+</body>
+</html>

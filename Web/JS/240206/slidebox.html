@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slidebox</title>
+  <script src="../../jquery-3.7.1.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background-color: beige;
+      display: flex;
+      align-items: center;
+    }
+
+    .slide {
+      margin: auto;
+
+      width: 500px;
+      height: 500px;
+      max-width: 500px;
+      max-height: 500px;
+      overflow: hidden;
+      box-shadow: 2px 2px 5px #808080;
+
+      position: relative;
+    }
+
+    .slide .slidebox {
+      width: 2500px;
+      height: 100%;
+      max-width: 2500px;
+      max-height: 500px;
+
+      transition: 1.4s;
+
+      display: flex;
+    }
+
+    .slide .slidebox .box {
+      font-size: 45px;
+      font-weight: 600;
+      line-height: 500px;
+      text-align: center;
+      color: white;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide .slidebox .box:nth-child(1) {
+      background-color: red;
+    }
+
+    .slide .slidebox .box:nth-child(2) {
+      background-color: orange;
+    }
+
+    .slide .slidebox .box:nth-child(3) {
+      background-color: yellow;
+    }
+
+    .slide .slidebox .box:nth-child(4) {
+      background-color: green;
+    }
+
+    .slide .slidebox .box:nth-child(5) {
+      background-color: blue;
+    }
+
+    .slide .bar-container {
+      position: absolute;
+      bottom: 2.5%;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      width: 50%;
+      height: 5%;
+
+      /* border: 1px solid white; */
+
+      display: flex;
+      justify-content: space-between;
+
+      overflow: hidden;
+    }
+    .slide .bar-container .bar {
+      width: 10%;
+      height: 100%;
+
+      border: 1px solid whitesmoke;
+      border-radius: 50%;
+
+      opacity: 80%;
+    }
+    .slide .filled{
+      position: absolute;
+      bottom: 2.5%;
+      left: calc(50% - 125px);
+
+      width: calc(50% * 0.1);
+      height: calc(5%);
+
+      border-radius: 50%;
+
+      background-color: whitesmoke;
+
+      opacity: 70%;
+      transition: 1.4s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide">
+    <div class="slidebox">
+
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+
+
+    </div>
+    <div class="bar-container">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="filled"></div>
+  </div>
+
+  <script>
+    let slidebox = document.querySelector(".slidebox")
+    let boxs = document.querySelectorAll(".box")
+
+    let filled = document.querySelector(".filled")
+
+    let idx = 0;
+
+    function slide() {
+      idx++
+
+      if (idx > boxs.length - 1) {
+        idx = 0
+      }
+      slidebox.style.transform = `translateX(${-idx * 500}px)`;
+      filled.style.transform = `translateX(${idx * (31.25 + 25)}px)`;
+      // 250 - 25*5 / 4 = 125/4 = 31.25
+    }
+
+    setInterval(slide, 2000)
+  </script>
+</body>
+
+</html>

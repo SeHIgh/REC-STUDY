@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글자관련css</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .text {
+      color: red;
+      /* 글자색상 -단어, hex, rgb... */
+      font-size: 40px;
+      /* 글자크기 - px,pt,rem,em... */
+      font-weight: 500;
+      /* 글자굵기 - 
+        100~900(100~300 라이트 / 400~600 노말 / 700~900 볼드)
+        ! 원래 굵게 디자인된 글자나 가늘게 디자인 된 글자는 변경이 안될 수 있음
+      */
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      /* 글꼴 - 컴퓨터 내에 저장된 글자만 표현 가능
+      (웹폰트x) */
+      font-style: italic;
+      /* 글자스타일 - normal, italic */
+      letter-spacing: 30px;
+      /* 자간 - 글자와 글자사이의 간격 */
+      line-height: 150%;
+      /* 행간 - 줄 간격 */
+      writing-mode: horizontal-tb;
+      /* 글자필기방법 vertical - 수직방향 */
+      text-align: center;
+      /* 문단 정렬 left, center, right (인라인 요소 같이 적용)*/
+      text-transform: capitalize;
+      /* 글자변형 - 
+      소문자        lowercase
+      대문자        uppercase
+      첫글자만 대문자 capitalize  (띄어쓰기 기준)
+       */
+      text-decoration: solid dodgerblue underline;
+      /* 글자 줄 표현 -
+      선종류 색상 위치
+      */
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    a {
+      /* 
+        !!!!!!
+        a태그 초기화값 / 기본설정값 > 글자색상, 밑줄삭제 
+        color:inherit > 부모값을 그대로 상속받겟다.
+        */
+      color: inherit;
+      text-decoration: none;
+    }
+
+    body{
+      background-color: seagreen;
+      /* 배경색상 */
+      background-image: url(../img/img_a/img/bg/vertical.jpg);
+      /* 
+      배경이미지 - url(파일)
+      1. 배경이 들어갈 공간보다 이미지가 작을경우
+      - 이미지가 반복되는 성격 (반복되면서 화면을 꽉채움)
+      2. 배경이 들어갈 공간보다 이미지가 클 경우
+      - 이미지는 잘려서 출력
+      배경색상, 이미지를 사용시에 반드시!!! 폭값과 높이값이 존재해야함
+      */
+      background-repeat: repeat-y;
+      /* 
+      배경의 반복되는 성격 -
+      no-repeat : 반복되지 않음
+      repeat-x : 가로축 반복
+      repeat-y : 세로축 반복
+      */
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1 class="text">
+    글자관련속성<br>
+    text css
+  </h1>
+  <a href="#"> a태그 </a>
+</body>
+
+</html>
