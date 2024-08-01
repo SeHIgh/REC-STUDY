@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class ReportChapter04 {
+	static void method1() {
+		Scanner scanner = new Scanner(System.in);
+		Account1 account1 = new Account1("account1");
+		Account1 account2 = new Account1("account2");
+		System.out.print("Enter deposit ammount for account1: ");
+		account1.setBalance(scanner.nextDouble());
+		System.out.println(account1.getName()+" balance:"+account1.getBalance());
+		System.out.print("Enter deposit ammount for account2: ");
+		account2.setBalance(scanner.nextDouble());
+		System.out.println(account2.getName()+" balance:"+account2.getBalance());
+		System.out.println();
+	}
+	static void method2() {
+			
+	}
+	static void method3() {
+		
+	}
+	public static void main(String[]args) {
+		method1();
+		method2();
+		method3();
+	}
+}
