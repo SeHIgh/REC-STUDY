@@ -1,7 +1,0 @@
-package MusicTester;
-
-abstract public class Music {
-	String name;
-	int year;
-	public Music()
-}

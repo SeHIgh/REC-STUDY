@@ -1,3 +1,0 @@
-﻿  1.c
-C:\Codework\Coding_2023\23_1_UnivStudy\C\C_DataStructure\LAB9\1.c(84,33): warning C4047: '!=': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-  LAB9.vcxproj -> C:\Codework\Coding_2023\23_1_UnivStudy\C\C_DataStructure\LAB9\x64\Debug\LAB9.exe
