@@ -1,7 +1,0 @@
-
-//게시글 윈도우 위 (메인 바디)패딩값
-#tt-body-page .main {
-    padding-top: 30px;
-}
-
-guest body : 56px
