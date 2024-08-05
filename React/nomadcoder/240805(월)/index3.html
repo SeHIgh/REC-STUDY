@@ -45,31 +45,20 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     const root = document.getElementById("root");
-    let counter = 0;
-    const countUp = () => {
-      counter += 1;
-      render();
-    }
-    
-    function render(){
-      ReactDOM.render(<Container />, root);
-    }
 
-    function reset(){
-      counter = 0;
-      render();
-    }
-
-    const Container = () => (
-      <div class="wrap">
-        <h3>Total clicks: {counter}</h3>
-        <div class="wrap">
-          <button onClick={countUp}>Click me</button>
-          <button onClick={reset}>Reset</button>
+    function App() {
+      const data = React.useState(0);
+      const counter = data[0];
+      const modifier = data[1];
+      console.log(data);
+      return (
+        <div>
+          <h3>Total clicks: {counter}</h3>
+          <button>Click me</button>
         </div>
-      </div>
-    );
+      );
+    }
 
-    render();
+    ReactDOM.render(<App />, root);
   </script>
 </html>

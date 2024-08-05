@@ -46,13 +46,14 @@
   <script type="text/babel">
     const root = document.getElementById("root");
     let counter = 0;
-    const countUp = () => {
+    
+    function countUp(){
       counter += 1;
       render();
     }
     
     function render(){
-      ReactDOM.render(<Container />, root);
+      ReactDOM.render(<App />, root);
     }
 
     function reset(){
@@ -60,15 +61,17 @@
       render();
     }
 
-    const Container = () => (
-      <div class="wrap">
-        <h3>Total clicks: {counter}</h3>
+    function App(){
+      return(
         <div class="wrap">
-          <button onClick={countUp}>Click me</button>
-          <button onClick={reset}>Reset</button>
+          <h3>Total clicks: {counter}</h3>
+          <div class="wrap">
+            <button onClick={countUp}>Click me</button>
+            <button onClick={reset}>Reset</button>
+          </div>
         </div>
-      </div>
-    );
+      )
+    }
 
     render();
   </script>
