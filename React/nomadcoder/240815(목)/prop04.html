@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>단위환산기</title>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+  // 하나의 버튼 함수를 재사용하되, 텍스트를 변경 하고자함
+  function Btn({banana}) {
+    console.log(banana);
+    return <button style={{
+      backgroundColor: "tomato",
+      color: "white",
+      padding: "10px 20px",
+      border: 0,
+      borderRadius: 10,
+    }}>{banana}</button>;
+  }
+
+  function App() {
+    return (
+      <div>
+        <Btn banana="Save Changes" />
+        <Btn banana="Continue" />
+      </div>
+    );
+  }
+
+  const root = document.getElementById("root");
+  ReactDOM.render(<App />, root);
+</script>
+
+</html>
