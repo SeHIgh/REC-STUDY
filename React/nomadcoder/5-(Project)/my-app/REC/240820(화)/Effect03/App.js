@@ -21,12 +21,6 @@ function App() {
       console.log("Search for", keyword);
     }
   }, [keyword]);
-  
-  useEffect(() => {
-    if (keyword != "" && counter > 0) {
-      console.log("keyword & counter changes.");
-    }
-  }, [keyword, counter]);
 
   return (
     <div>
