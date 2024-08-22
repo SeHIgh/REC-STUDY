@@ -17,15 +17,15 @@ function App() {
 
   return (
     <div>
-      <h1>My To Dos ({toDos.length})</h1>
+      <h1>SeHi 의 ToDo 리스트 [{toDos.length}]</h1>
       <form onSubmit={onSubmit}>
         <input
           onChange={onChange}
           value={toDo}
           type="text"
-          placeholder="Write your to do..."
+          placeholder="할 일을 적어 주세요..."
         />
-        <button>Add To Do</button>
+        <button>추가</button>
       </form>
       <hr />
       <ul>

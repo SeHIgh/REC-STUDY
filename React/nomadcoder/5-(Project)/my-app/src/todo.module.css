@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'HSSanTokki20-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+    
+}
+
+.title{
+    font-family: 'HSSanTokki20-Regular';
+    font-weight: bold;
+    font-size: 50px;
+}
