@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./todo.module.css"
 
 function App() {
   const [toDo, setToDo] = useState("");
@@ -16,9 +17,9 @@ function App() {
   useEffect(() => console.log(toDos), [toDos]);
 
   return (
-    <div>
-      <h1>SeHi 의 ToDo 리스트 [{toDos.length}]</h1>
-      <form onSubmit={onSubmit}>
+    <div className={styles.main}>
+      <h1 className={styles.title}>SeHi 의 ToDo 리스트</h1>
+      <form className={styles.inputForm} onSubmit={onSubmit}>
         <input
           onChange={onChange}
           value={toDo}
@@ -33,6 +34,8 @@ function App() {
           <li key={index}>{item}</li>
         ))}
       </ul>
+      <hr />
+      <p>개수 : {toDos.length}</p>
     </div>
   );
 }
