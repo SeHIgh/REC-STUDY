@@ -1,41 +1,27 @@
-import { useState, useEffect } from "react";
-import styles from "./todo.module.css"
+import { useEffect, useState } from "react";
 
 function App() {
-  const [toDo, setToDo] = useState("");
-  const [toDos, setToDos] = useState([]);
-  const onChange = (event) => setToDo(event.target.value);
-  const onSubmit = (event) => {
-    event.preventDefault();
-    if (toDo === "") {
-      return;
-    }
-    setToDos((currentArray) => [toDo, ...currentArray]);
-    setToDo("");
-  };
-
-  useEffect(() => console.log(toDos), [toDos]);
-
+  const [loading, setLoading] = useState(true);
+  const [coins, setCoins] = useState([]);
+  useEffect(() => {
+    fetch("https://api.coinpaprika.com/v1/tickers")
+      .then((response) => response.json())
+      .then((json) => {
+        setCoins(json);
+        setLoading(false);
+      });
+  }, []);
   return (
-    <div className={styles.main}>
-      <h1 className={styles.title}>SeHi 의 ToDo 리스트</h1>
-      <form className={styles.inputForm} onSubmit={onSubmit}>
-        <input
-          onChange={onChange}
-          value={toDo}
-          type="text"
-          placeholder="할 일을 적어 주세요..."
-        />
-        <button>추가</button>
-      </form>
-      <hr />
+    <div>
+      <h1>The Coins! ({coins.length})</h1>
+      {loading ? <strong>Loading...</strong> : null}
       <ul>
-        {toDos.map((item, index) => (
-          <li key={index}>{item}</li>
+        {coins.map((coin) => (
+          <li>
+            {coin.name} ({coin.symbol}): ${coin.quotes.USD.price} USD
+          </li>
         ))}
       </ul>
-      <hr />
-      <p>개수 : {toDos.length}</p>
     </div>
   );
 }
