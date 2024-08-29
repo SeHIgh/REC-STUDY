@@ -69,7 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
->[!info] 변경 사항
+>## 변경 사항
 >package.json > react-route-dom 버전 6 이상 부터 해당
 >1. `Switch` -> `Routes`
 >2. `<Route path="/"> <(컴포넌트) /> </Route>` 
