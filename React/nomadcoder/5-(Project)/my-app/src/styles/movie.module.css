@@ -1,0 +1,136 @@
+.cont{
+    width: 240px;
+    height: 500px;
+    margin-top: 10px;
+    padding: 5px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    transition: all 0.5s ease;
+}
+
+.coverImg{
+    width: 230px;
+    height: 345px;
+
+    transition: all 0.5s ease;
+}
+
+.title{
+    text-align: center;
+
+    transition: all 0.5s ease;
+}
+
+.genres{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+
+    transition: all 0.5s ease;
+}
+
+.genres>h3{
+    text-align: center;
+    line-height: 32.5px;
+    width: 38px;
+}
+
+.genres>ul{
+    width: 187px;
+
+    padding: 2px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 5px;
+
+    overflow: hidden;
+}
+
+.genres:hover{
+    width: fit-content;
+    height: fit-content;
+
+    background-color: #FFFFFF;
+}
+.genres:hover>ul{
+    width: fit-content;
+
+    border-radius: 2px;
+
+    overflow: visible;
+
+    z-index: 100;
+}
+
+.genres>ul>li{
+    width: fit-content;
+    height: 32.5px;
+
+    padding: 5px;
+    background-color: #C7E3F2;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+.genres>ul>li:hover{
+    background-color: #B1E0F2;
+}
+
+.cont {
+    position: relative; /* 부모 요소의 위치를 상대적으로 설정 */
+    overflow: hidden; /* 부모 요소를 넘는 부분을 숨김 */
+}
+
+.cont:hover {
+    transform: scaleX(2);
+    z-index: 100;
+    background-color: #FFFFFF;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.cont:hover a {
+    position: absolute; /* 위치를 절대적으로 설정 */
+    left: 50%; /* 부모 요소의 가운데에 위치 */
+    transform: translateX(-50%); /* 가운데 정렬 */
+
+    display: flex; /* `inline`에서 `flex`로 변경 */
+    flex-direction: row;
+    justify-content: start;
+    gap: 5px;
+}
+
+.cont:hover .coverImg {
+    position: absolute; /* 위치를 절대적으로 설정 */
+    left: 0; /* 부모 요소의 왼쪽에 위치 */
+    transform: scaleX(0.5); /* 크기 조정 */
+    width: auto;
+    height: 490px;
+}
+
+.cont:hover .title {
+    position: absolute;
+    left: 50%; /* 부모 요소의 가운데에 위치 */
+    transform: translateX(-50%) scaleX(0.5); /* 위치 및 크기 조정 */
+    width: fit-content;
+    text-align: start;
+}
+
+.cont:hover .genres {
+    position: absolute;
+    right: 0; /* 부모 요소의 오른쪽에 위치 */
+    transform: scaleX(0.5); /* 크기 조정 */
+}
