@@ -1,0 +1,7 @@
+#페이지 순서
+
+/ -> All coins
+/:id -> /btc -> Coin Detail
+
+/btc/information
+/btc/chart
