@@ -71,7 +71,6 @@ function Coins() {
       setLoading(false);
     })();
   }, []);
-  console.log(coins);
   return (
     <Container>
       <Header>
@@ -83,7 +82,14 @@ function Coins() {
         <CoinsList>
           {coins.map((coin) => (
             <Coin key={coin.id}>
-              <Link to={`/${coin.id}`}>
+              <Link
+                to={{
+                  pathname: `/${coin.id}`,
+                  state: {
+                    name: coin.name,
+                  },
+                }}
+              >
                 <Img
                   src={`https://cryptoicon-api.pages.dev/icons/128/color/${coin.symbol.toLowerCase()}.png`}
                 />
