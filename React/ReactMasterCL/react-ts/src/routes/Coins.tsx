@@ -28,9 +28,8 @@ const Coin = styled.li`
     align-items: center;
   }
   &:hover {
-    a {
-      color: ${(props) => props.theme.accentColor};
-    }
+      color: white;
+      background-color: ${(props) => props.theme.accentColor};
   }
 `;
 
