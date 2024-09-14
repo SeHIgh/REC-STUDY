@@ -70,7 +70,7 @@ const Tabs = styled.div`
   gap: 10px;
 `;
 
-const Tab = styled.span`
+const Tab = styled.span<{isActive: boolean}>`
   text-align: center;
   text-transform: uppercase;
   font-size: 12px;
@@ -78,6 +78,8 @@ const Tab = styled.span`
   background-color: rgba(0, 0, 0, 0.5);
   padding: 7px 0px;
   border-radius: 10px;
+  color: ${(props) => props.isActive ? props.theme.accentColor : props.theme.textColor};
+  background-color: ${(props) => props.isActive ? props.theme.activeColor : props.theme.inactiveColor};
   a {
     display: block;
   }
@@ -163,9 +165,6 @@ function Coin() {
   const priceMatch = useRouteMatch("/:coinId/price");
   const chartMatch = useRouteMatch("/:coinId/chart");
 
-  console.log(priceMatch);
-  console.log(chartMatch);
-
   useEffect(() => {
     (async () => {
       const infoData = await (
@@ -219,10 +218,10 @@ function Coin() {
           </Overview>
 
           <Tabs>
-            <Tab>
+            <Tab isActive={chartMatch !== null}>
               <Link to={`/${coinId}/chart`}>Chart</Link>
             </Tab>
-            <Tab>
+            <Tab isActive={priceMatch !== null}>
               <Link to={`/${coinId}/price`}>Price</Link>
             </Tab>
           </Tabs>

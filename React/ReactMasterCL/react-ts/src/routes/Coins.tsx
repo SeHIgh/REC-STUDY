@@ -17,19 +17,22 @@ const CoinsList = styled.ul``;
 const Coin = styled.li`
   background-color: white;
   color: ${(props) => props.theme.bgColor};
-  padding: 20px;
+  padding: 0;
   border-radius: 15px;
   margin-bottom: 10px;
+  transition: 0.2s ease-in-out;
   a {
     padding: 20px;
-    transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in; 
     display: block;
     display: flex;
     align-items: center;
+    font-size: 22px;
   }
   &:hover {
-      color: white;
-      background-color: ${(props) => props.theme.accentColor};
+      color: ${(props) => props.theme.accentColor};
+      background-color: #c0c0c0;
+      transform: scale(1.1);
   }
 `;
 
@@ -73,7 +76,7 @@ function Coins() {
   return (
     <Container>
       <Header>
-        <Title>코인</Title>
+        <Title>Coin Ranking</Title>
       </Header>
       {loading ? (
         <Loader>Loading...</Loader>
@@ -92,7 +95,7 @@ function Coins() {
                 <Img
                   src={`https://cryptoicon-api.pages.dev/icons/128/color/${coin.symbol.toLowerCase()}.png`}
                 />
-                {coin.name} &rarr;
+                {coin.rank}. {coin.name} &rarr;
               </Link>
             </Coin>
           ))}
