@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { fetchCoins } from "./api";
 import { useQuery } from "@tanstack/react-query";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -81,6 +82,11 @@ function Coins() {
   // }, []);
   return (
     <Container>
+      <HelmetProvider>
+        <Helmet>
+          <title>Coin Ranking</title>
+        </Helmet>
+      </HelmetProvider>
       <Header>
         <Title>Coin Ranking</Title>
       </Header>
