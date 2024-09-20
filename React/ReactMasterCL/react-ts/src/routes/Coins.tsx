@@ -17,8 +17,8 @@ const Header = styled.header`
 `;
 const CoinsList = styled.ul``;
 const Coin = styled.li`
-  background-color: white;
-  color: ${(props) => props.theme.bgColor};
+  background-color: ${(props) => props.theme.inactiveColor};
+  color: ${(props) => props.theme.textColor};
   padding: 0;
   border-radius: 15px;
   margin-bottom: 10px;
@@ -33,7 +33,7 @@ const Coin = styled.li`
   }
   &:hover {
     color: ${(props) => props.theme.accentColor};
-    background-color: #c0c0c0;
+    background-color: ${(props) => props.theme.activeColor};
     transform: scale(1.1);
   }
 `;
