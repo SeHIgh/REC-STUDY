@@ -4,6 +4,7 @@ import ApexChart from "react-apexcharts";
 
 interface IChartProps {
   coinId: string;
+  isDark: boolean;
 }
 
 interface IHistorical {
@@ -17,7 +18,7 @@ interface IHistorical {
   market_cap: number;
 }
 
-function Chart({ coinId }: IChartProps) {
+function Chart({ coinId, isDark }: IChartProps) {
   const { isLoading, data } = useQuery<IHistorical[]>({
     queryKey: ["ohlcv", coinId],
     queryFn: () => fetchCoinHistory(coinId),
@@ -49,7 +50,7 @@ function Chart({ coinId }: IChartProps) {
             },
             // 제공 테마 옵션
             theme: {
-              mode: "dark",
+              mode: isDark ? "dark" : "light",
               // palette: "palette1",
               // monochrome: {
               //   enabled: false,
@@ -65,39 +66,42 @@ function Chart({ coinId }: IChartProps) {
             },
             // grid 옵션
             grid: {
-              show: false
+              show: false,
             },
             // x축 옵션
             xaxis: {
               labels: {
-                show: false
+                show: false,
               },
               axisTicks: {
-                show: false
+                show: false,
               },
               axisBorder: {
-                show: false
+                show: false,
               },
-              categories: data?.map((price) => new Date(Number(price.time_close) * 1000).toUTCString()) ?? [],
+              categories:
+                data?.map((price) =>
+                  new Date(Number(price.time_close) * 1000).toUTCString()
+                ) ?? [],
               type: "datetime",
             },
             // y축 옵션
             yaxis: {
-              show: false
+              show: false,
             },
             fill: {
               type: "gradient",
               gradient: {
                 gradientToColors: ["#0be881"],
                 stops: [0, 100],
-              }
+              },
             },
             colors: ["#0fbcf9"],
             tooltip: {
               y: {
-                formatter: (value) => `${value.toFixed(2)}`
-              }
-            }
+                formatter: (value) => `${value.toFixed(2)}`,
+              },
+            },
           }}
         ></ApexChart>
       )}

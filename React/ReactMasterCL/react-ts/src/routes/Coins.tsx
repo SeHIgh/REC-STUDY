@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { fetchCoins } from "./api";
 import { useQuery } from "@tanstack/react-query";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useState } from "react";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -64,22 +65,17 @@ interface Icoin {
   type: string;
 }
 
-function Coins() {
+interface ICoinsProps {
+  toggleDark: () => void;
+}
+
+function Coins({ toggleDark }: ICoinsProps) {
   const { isLoading, data } = useQuery<Icoin[]>({
     queryKey: ["allCoins"],
     queryFn: fetchCoins,
     select: (data) => data.slice(0, 100),
   });
-  // const [coins, setCoins] = useState<CoinInterface[]>([]);
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   (async () => {
-  //     const response = await fetch("https://api.coinpaprika.com/v1/coins");
-  //     const json = await response.json();
-  //     setCoins(json.slice(0, 100));
-  //     setLoading(false);
-  //   })();
-  // }, []);
+
   return (
     <Container>
       <HelmetProvider>
@@ -89,6 +85,7 @@ function Coins() {
       </HelmetProvider>
       <Header>
         <Title>Coin Ranking</Title>
+        <button onClick={toggleDark}>Toggle Mode</button>
       </Header>
       {isLoading ? (
         <Loader>Loading...</Loader>

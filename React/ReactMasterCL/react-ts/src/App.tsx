@@ -70,6 +70,7 @@ a {
 
 function App() {
   const [isDark, setIsDark] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const toggleDark = () => setIsDark((current) => !current);
   return (
     <>
@@ -77,9 +78,8 @@ function App() {
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" />
       </Helmet>
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-        <button onClick={toggleDark}>Toggle Mode</button>
         <GlobalStyle />
-        <Router />
+        <Router isDark={isDark} toggleDark={toggleDark} />
         <ReactQueryDevtools initialIsOpen={false} />
       </ThemeProvider>
     </>
