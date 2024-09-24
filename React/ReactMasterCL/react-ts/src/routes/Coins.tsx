@@ -4,6 +4,8 @@ import { fetchCoins } from "./api";
 import { useQuery } from "@tanstack/react-query";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useState } from "react";
+import { atom, useRecoilValue, useSetRecoilState } from "recoil";
+import { isDarkAtom } from "../atoms";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -55,6 +57,18 @@ const Img = styled.img`
   margin-right: 10px;
 `;
 
+const Darkmode = styled.button`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: ${(props) => props.theme.accentColor};
+  color: ${(props) => props.theme.bgColor};
+  margin-left: 50px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+`;
+
 interface Icoin {
   id: string;
   name: string;
@@ -65,16 +79,16 @@ interface Icoin {
   type: string;
 }
 
-interface ICoinsProps {
-  toggleDark: () => void;
-}
+interface ICoinsProps {}
 
-function Coins({ toggleDark }: ICoinsProps) {
+function Coins() {
   const { isLoading, data } = useQuery<Icoin[]>({
     queryKey: ["allCoins"],
     queryFn: fetchCoins,
     select: (data) => data.slice(0, 100),
   });
+  const setterFn = useSetRecoilState(isDarkAtom);
+  const isDark = useRecoilValue(isDarkAtom);
 
   return (
     <Container>
@@ -85,7 +99,7 @@ function Coins({ toggleDark }: ICoinsProps) {
       </HelmetProvider>
       <Header>
         <Title>Coin Ranking</Title>
-        <button onClick={toggleDark}>Toggle Mode</button>
+        <Darkmode onClick={isDark? ()=>setterFn(false) : ()=>setterFn(true)}> {isDark ? "Light" : "Dark"}</Darkmode>
       </Header>
       {isLoading ? (
         <Loader>Loading...</Loader>
