@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { fetchCoins } from "./api";
 import { useQuery } from "@tanstack/react-query";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { useState } from "react";
-import { atom, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { isDarkAtom } from "../atoms";
 
 const Container = styled.div`
